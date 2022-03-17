@@ -1,0 +1,397 @@
+@import 'const';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $textFont;
+}
+
+.header{
+    height: 90px;
+    display: $displayFlex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: $fontSize;
+    .nav{
+        display: $displayFlex;
+        ul{
+            display: $displayFlex;
+            align-items: center;
+            li{
+                list-style: none;
+                margin-right: 32px;
+                a{
+                    text-decoration: none;
+                }
+                a:visited{
+                    color: $textColor;
+                }
+            }
+        }
+    }
+    .btn{
+        @extend %btn;
+    }
+}
+
+.main__info{
+    height: 720px;
+    display: $displayGrid;
+    grid-template-columns: 50% 50%;
+    background-color: #ECE7E4;
+    .main__info-desc{
+      @extend %container;
+      margin-left: auto;
+      margin-right: auto;
+      display: $displayFlex;
+      flex-direction: column;
+      justify-content: center;
+
+      .title{
+          @extend %title;
+          padding-bottom: 20px;
+      }
+      h1{
+          font-size: 64px;
+          line-height: 70.4px;
+          padding-bottom: 18px;
+      }
+      .description{
+          color: $descColor;
+          padding-bottom: 41px;
+      }
+      .btn__more{
+          @extend %btnMore;
+      }
+      .btn__more:hover{
+          @extend %btn;
+          width: 130px;
+      }
+    }
+    .main__info-bg{
+        background-image: url(./asssets/img/bg1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.ourfirm{
+    @extend %container;
+    display: $displayGrid;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    grid-template-columns: 40% 40%;
+
+    h2{
+        @extend %h2Font;
+        margin-left: auto;
+        margin-right: 130px;
+    }
+    .ourfirm__desc{
+        color: $descColor;
+
+        .description{
+            padding-bottom: 10px;
+        }
+        .ourfirm__user{
+            display: $displayFlex;
+            align-items: center;
+            img{
+                margin-right: 30px;
+            }
+            p{
+                @extend %userName;
+                span{
+                    @extend %userJob;
+                }
+            }
+        }
+    }
+}
+
+.reeding{
+    @extend %bgPart;
+    background-image: url(./asssets/img/bg2.png);
+    
+    .reeding__desc{
+        @extend %container;
+        width: 285px;
+        position: absolute;
+        right: 10%;
+        top: calc(600px - 50%);
+        .title{ 
+            @extend %title;
+            .description{
+                color: $descColor;
+            }
+    }
+    }
+}
+
+.process{
+    @extend %container;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    .title{
+        @extend %title;
+        padding-bottom: 10px;
+    }
+    .h2__title{
+        @extend %h2Title;
+        padding-bottom: 45px;
+    }
+    .process__list{
+        display: $displayGrid;
+        grid-template-columns: repeat(3, 1fr);
+        .process__item{
+            margin-left: 50px;
+            margin-right: 50px;
+            img{
+                padding-bottom: 15px;
+            }
+            .process__item-title{
+                font-size: 18px;
+                color: $descColor;
+                padding-bottom: 10px;
+            }
+            .process__item-desc{
+                font-size: $fontSize;
+                color: $titleColor;
+            }
+        }
+    }
+}
+
+.marble{
+    @extend %bgPart;
+    background-image: url(./asssets/img/bg3.png);
+    .marble__desc{
+        @extend %container;
+        width: 285px;
+        position: absolute;
+        right: 10%;
+        top: calc(600px - 50%);
+        .title{ 
+            @extend %title;
+        .description{
+            color: $descColor;
+        }
+    }
+    }
+}
+
+.container{
+    // @extend %container;
+    background-color: $descColor;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .partners{
+        @extend %container;
+        display: $displayGrid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        .partners__desc{
+            margin-right: 160px;
+            .title{
+                @extend %title;
+                color: #ECE7E4;
+            }
+            h2{
+                @extend %h2Font;
+                color: #fff;
+                text-align: left;
+                padding-bottom: 14px;
+            }
+            .description{
+                font-size: 15px;
+                color: #ECE7E4;
+            }
+        }
+        .partners__logo{
+            display: $displayGrid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: start;
+            grid-row-gap: 90px;
+            align-items: center;
+            padding-left: 50px;
+        }
+    }
+}
+
+.staircase{
+    @extend %bgPart;
+    background-image: url(./asssets/img/bg4.png);
+    .staircase__desc{
+        @extend %container;
+        width: 285px;
+        position: absolute;
+        left: 10%;
+        top: calc(600px - 50%);
+        .title{ 
+            @extend %title;
+        .description{
+            color: $descColor;
+        }
+    }
+    }
+}
+
+.feautered__projects{
+    background-color: #F7F7F7;
+    ;
+    .container{
+      @extend %container;  
+      background-color: #F7F7F7;
+    
+        .progects__desc{
+            width: 600px;
+            .h2__title{
+                @extend %h2Title;
+                padding-bottom: 15px;
+                text-align: left;
+            }
+            .description{
+                font-size: 24px;
+                color: $titleColor;
+                padding-bottom: 45px;
+            }
+        }
+        .project__list{
+            display: $displayGrid;
+            grid-template-columns: repeat(3, 1fr);
+            padding-bottom: 50px;
+            justify-items: center;
+        }
+
+        .btn__more{
+            @extend %btnMore;
+            width: 180px;
+            margin-left: calc(50% - 90px);
+        }
+        .btn__more:hover{
+            @extend %btn;
+            width: 180px;
+        }
+    }
+}
+
+.our__team{
+    @extend %container;
+    display: $displayGrid;
+    grid-template-columns: 1fr 2fr;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .our__team-desc{
+        margin-right: 35px;
+        h2{
+            @extend %h2Font;
+            padding-bottom: 14px;
+        }
+        p{
+            font-size: 15px;
+            color: $titleColor;
+            padding-bottom: 30px;
+        }
+        .btn__more{
+            @extend %btnMore;
+            width: 121px;
+        }
+        .btn__more:hover{
+            @extend %btn;
+            width: 121px;
+
+        }
+    }
+    .team__list{
+        display: $displayGrid;
+        grid-template-columns: 1fr 1fr;
+        .team__item{
+            padding-bottom: 52px;
+            display: $displayFlex;
+            align-items: center;
+            img{
+                margin-right: 30px;
+            }
+            p{
+                @extend %userName;
+                span{
+                    @extend %userJob;
+                }
+            }
+        }
+    }
+}
+
+.getIn{
+    background-color: #CEC4BC;
+    .container{
+        @extend %container;
+        background-color: #CEC4BC;
+        display: $displayFlex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .getIn__desc{
+            width: 50%;
+            .title{
+                @extend %title;
+            }
+            .h2__title{
+                @extend %h2Title;
+                text-align: left;
+            }
+        }
+        .btn__more{
+            @extend %btnMore;
+            width: 145px;
+        }
+        .btn__more:hover{
+            @extend %btn;
+            width: 145px;
+        }
+    }
+}
+
+footer{
+    @extend %container;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: $displayFlex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .logo{
+        img{
+            padding-bottom: 20px;
+        }
+        p{
+            font-size: 14px;
+            color: $titleColor;
+        }
+    }
+    .social{
+        display: $displayFlex;
+        .ico{
+            background-repeat: no-repeat;
+            display: block;
+            margin-right: 20px;
+        }
+        .ico__tw{
+            background-image: url(./asssets/img/ico_tw.png);
+            width: 24px;
+            height: 20px;
+        }
+        .ico__ig{
+            background-image: url(./asssets/img/ico_ig.png);
+            width: 24px;
+            height: 24px;
+        }
+        .ico__fb{
+            background-image: url(./asssets/img/ico_fb.png);
+            width: 12px;
+            height: 24px;
+        }
+    }
+}
