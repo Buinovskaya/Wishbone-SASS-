@@ -263,8 +263,12 @@ body{
         .project__list{
             display: $displayGrid;
             grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 10px;
             padding-bottom: 50px;
             justify-items: center;
+            img{
+                width: 100%;
+            }
         }
 
         .btn__more{

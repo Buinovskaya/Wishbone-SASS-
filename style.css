@@ -364,8 +364,13 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
   padding-bottom: 50px;
   justify-items: center;
+}
+
+.feautered__projects .container .project__list img {
+  width: 100%;
 }
 
 .feautered__projects .container .btn__more {
